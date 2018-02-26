@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>coody</param-value>
+	</context-param>
+
+	<!-- 配置扫描的包 -->
+	<context-param>
+		<param-name>scanPacket</param-name>
+		<param-value>org.coody.web</param-value>
+	</context-param>
+	<!-- 配置监听器 -->
+	<listener>
+		<listener-class>org.coody.framework.box.init.BoxServletListen</listener-class>
+	</listener>
+	<!-- 初始化分发器 -->
+	<servlet>
+		<servlet-name>DispatServlet</servlet-name>
+		<servlet-class>org.coody.framework.box.mvc.DispatServlet</servlet-class>
+		<init-param>
+			<param-name>viewPath</param-name>
+			<param-value>/WEB-INF/jsp</param-value>
+		</init-param>
+	</servlet>
+	<!-- MVC配置 -->
+	<servlet-mapping>
+		<servlet-name>DispatServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 业务Servlet -->
+	<servlet>
+		<servlet-name>LoadUserList</servlet-name>
+		<servlet-class>org.coody.web.servlet.LoadUserList</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoadUserList</servlet-name>
+		<url-pattern>/servlet/LoadUserList</url-pattern>
+	</servlet-mapping>
+</web-app>
