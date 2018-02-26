@@ -16,7 +16,7 @@ JDK1.8+
 
 5.目录结构： 
 
-
+![Image text](https://static.oschina.net/uploads/space/2018/0225/215135_sePy_3094707.png)
 
 6. 程序架构：
 
