@@ -1,3 +1,14 @@
+更新记录：
+
+2018-02-24：初步研发，实现IOC+AOP
+
+2018-02-25：拓展MVC，基于MVC结合ICO+AOP实现轻量化无依赖类spring开发模式
+
+2018-02-26：整改为maven模式，并整合自写ORM框架并配合aop实现事物管理。
+
+
+=======================================================
+
 1. 项目背景：
 
 由于笔者近期参与的一些项目体系未使用到任何框架，而笔者对spring体系特别向往，故此研发本项目。
@@ -93,9 +104,9 @@ org.coody.framework.box.proyx.CglibProxy 基于cglib字节码创建子类的实�
 org.coody.framework.box.wrapper.AspectWrapper 本处命名可能不尽规范。本类用于多切面的调度和适配  
 
 7. 实现效果：
+![Image text](https://static.oschina.net/uploads/space/2018/0225/215613_79vh_3094707.png)
 
-
-
+![Image text](https://static.oschina.net/uploads/space/2018/0225/215847_nlKD_3094707.png)
 
 
 
